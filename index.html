@@ -1,0 +1,1588 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FISAT | Federal Institute of Science And Technology (Autonomous)</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Poppins (Official Brand Typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Elevated Modern Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       WELCOME SPLASH SCREEN (Pure White Background with FISAT Logo Only)
+       ========================================================================== -->
+  <div class="welcome-splash-screen" id="welcomeSplashScreen">
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img src="assets/fisat-emblem-clean.png" alt="FISAT Logo" class="splash-logo" onerror="this.onerror=null; this.src='assets/logo.png';">
+      </div>
+      <h1 class="splash-title">FEDERAL INSTITUTE OF SCIENCE AND TECHNOLOGY</h1>
+      <p class="splash-welcome-msg">"Welcome to FISAT"</p>
+      <div class="splash-subtitle">Autonomous Institution &bull; Hormis Nagar, Angamaly</div>
+      <div class="splash-loader-bar">
+        <div class="splash-loader-progress"></div>
+      </div>
+      <span class="splash-loading-text">Loading Campus Experience...</span>
+    </div>
+  </div><!-- ==========================================================================
+       1. AUDIENCE PERSONA BAR (Convenience for Specific Users)
+       ========================================================================== -->
+
+  <!-- ==========================================================================
+       2. REFINED LIVE NOTIFICATION TICKER
+       ========================================================================== -->
+  <div class="live-ticker-wrap">
+    <div class="container-wide">
+      <div class="ticker-flex">
+        <div class="ticker-badge" style="cursor:pointer;" onclick="document.getElementById('notifications').scrollIntoView({behavior:'smooth'})">
+          <span class="pulse-dot"></span>
+          <span>NOTIFICATIONS</span>
+        </div>
+        <div class="ticker-content">
+          <div class="ticker-track">
+            <a href="javascript:openBtechQuotaChooser()" class="ticker-item">
+              <span class="ticker-tag adm">ADMISSIONS</span>
+              <span>BTech Admissions 2026-27 Open (Choose Govt. Quota or Management Quota)</span>
+            </a>
+            <a href="#admissions-hub" class="ticker-item">
+              <span class="ticker-tag adm">ADMISSIONS</span>
+              <span>MCA & iMCA (5-Year Integrated) 2026-27 Applications Now Active</span>
+            </a>
+            <a href="https://fbs.ac.in/" class="ticker-item">
+              <span class="ticker-tag adm">ADMISSIONS</span>
+              <span>MBA 2026-27 Admissions: FISAT Business School (FBS) GD & PI Rounds</span>
+            </a>
+            <a href="#admissions-hub" class="ticker-item">
+              <span class="ticker-tag adm">M.TECH</span>
+              <span>M.Tech 2026 Spot Admission & Counselling Registration</span>
+            </a>
+            <a href="#placements" class="ticker-item">
+              <span class="ticker-tag adm">PLACEMENTS</span>
+              <span>602+ Job Offers Recorded for Class of 2026 | Top Package: ₹17.5 LPA</span>
+            </a>
+            <!-- Duplicate for seamless scroll -->
+            <a href="javascript:openBtechQuotaChooser()" class="ticker-item">
+              <span class="ticker-tag adm">ADMISSIONS</span>
+              <span>BTech Admissions 2026-27 Open (Choose Govt. Quota or Management Quota)</span>
+            </a>
+            <a href="https://intranet.fisat.ac.in/Hostel/" class="ticker-item">
+              <span class="ticker-tag adm">CAMPUS</span>
+              <span>Hostel Admissions 2026: Online Room Allotment Form Released</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       3. INSTITUTIONAL BRAND HEADER
+       ========================================================================== -->
+  <header class="main-header">
+    <div class="container-wide">
+      <div class="header-inner">
+        <!-- Brand Logo & Accreditations -->
+        <div class="brand-wrapper">
+          <a href="#" aria-label="FISAT Home">
+            <img src="assets/fisat-logo.png" alt="Federal Institute of Science And Technology (FISAT)" class="brand-logo-img" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/themes/fisat2022/assets/fisat-logo.png';">
+          </a>
+          <img src="assets/accredited-logos.png" alt="Accredited by NAAC A+, NBA, Affiliated to KTU, AICTE Approved" class="accreditation-badge-img" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/themes/fisat2022/assets/accredited-logos.png';">
+        </div>
+
+        <!-- Right Side Actions & Tools -->
+        <div class="header-right-actions">
+          <button class="search-trigger-btn" id="searchTriggerBtn" aria-label="Search Website">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search portals, syllabus, admissions...</span>
+            <kbd class="search-shortcut-kbd">Ctrl K</kbd>
+          </button>
+          
+          <a href="https://intranet.fisat.ac.in/" class="erp-login-btn">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Student Portal</span>
+          </a>
+
+          <button class="btn btn-gold btn-sm" onclick="openBtechQuotaChooser()">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Apply Now 2026</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       4. PRIMARY NAVIGATION (Red Pop-up Removed, BTech Quota Split, Real About Links)
+       ========================================================================== -->
+  <nav class="nav-bar" id="mainNavBar">
+    <div class="container-wide nav-container">
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item active"><a href="#" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        
+        <!-- STRUCTURED ADMISSIONS TAB (Red Pop-up Removed & BTech Quota Split Implemented) -->
+        <li class="nav-item nav-item-admissions">
+          <a href="#admissions-hub" class="nav-link">
+            <i class="fa-solid fa-graduation-cap"></i> Admissions <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu admissions-dropdown-menu">
+            <li class="dropdown-header-tag">
+              <span>B.Tech Quota Selection</span>
+              <i class="fa-solid fa-split" style="color:#F59E0B;"></i>
+            </li>
+            <!-- BTech Government Quota Split -->
+            <li>
+              <a href="admissions-btech-govt.html" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-landmark"></i>
+                  <span>BTech - Government Quota</span>
+                </div>
+                <span class="dropdown-badge">KEAM Allotment</span>
+              </a>
+            </li>
+            <!-- BTech Management Quota Split -->
+            <li>
+              <a href="https://btech-admission.fisat.ac.in/admission/" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-file-signature"></i>
+                  <span>BTech - Management Quota</span>
+                </div>
+                <span class="dropdown-badge">Official Portal</span>
+              </a>
+            </li>
+
+            <li class="dropdown-header-tag" style="margin-top:6px;">
+              <span>Postgraduate & Campus Programs</span>
+            </li>
+            <!-- MCA Admission -->
+            <li>
+              <a href="#admissions-hub" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-laptop-code"></i>
+                  <span>MCA Admission</span>
+                </div>
+                <span class="dropdown-badge">Official Form</span>
+              </a>
+            </li>
+            <!-- iMCA Admission -->
+            <li>
+              <a href="#admissions-hub" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-code-merge"></i>
+                  <span>iMCA Admission</span>
+                </div>
+                <span class="dropdown-badge">5-Year Int.</span>
+              </a>
+            </li>
+            <!-- MBA Admission -->
+            <li>
+              <a href="https://fbs.ac.in/" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-chart-pie"></i>
+                  <span>MBA Admission</span>
+                </div>
+                <span class="dropdown-badge">FBS Portal</span>
+              </a>
+            </li>
+            <!-- MTech Admission -->
+            <li>
+              <a href="#admissions-hub" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-atom"></i>
+                  <span>MTech Admission</span>
+                </div>
+                <span class="dropdown-badge">Spot Adm.</span>
+              </a>
+            </li>
+            <!-- Hostel Admission -->
+            <li>
+              <a href="https://intranet.fisat.ac.in/Hostel/" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-bed"></i>
+                  <span>Hostel Admission</span>
+                </div>
+                <span class="dropdown-badge">Online Portal</span>
+              </a>
+            </li>
+            <!-- College Plus Admission -->
+            <li>
+              <a href="#admissions-hub" class="dropdown-link">
+                <div class="dropdown-link-inner">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>College Plus Admission</span>
+                </div>
+                <span class="dropdown-badge">Skilling</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- ABOUT TAB (Reloads directly to authentic Vision, Mission, & Institution content) -->
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html#institution" class="dropdown-link"><i class="fa-solid fa-landmark"></i> The Institution</a></li>
+            <li><a href="about.html#vision" class="dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+            <li><a href="about.html#values" class="dropdown-link"><i class="fa-solid fa-gem"></i> Core Values (INSPIRE)</a></li>
+            <li><a href="about.html#fboaes" class="dropdown-link"><i class="fa-solid fa-building-columns"></i> FBOAES Management</a></li>
+            <li><a href="about.html#governing-body" class="dropdown-link"><i class="fa-solid fa-users-gear"></i> Governing Body</a></li>
+            <li><a href="about.html#academic-council" class="dropdown-link"><i class="fa-solid fa-user-graduate"></i> Academic Council</a></li>
+            <li><a href="about.html#principal" class="dropdown-link"><i class="fa-solid fa-user-tie"></i> The Principal</a></li>
+            <li><a href="about.html#founder" class="dropdown-link"><i class="fa-solid fa-award"></i> Founder Chairman</a></li>
+            <li><a href="about.html#organogram" class="dropdown-link"><i class="fa-solid fa-sitemap"></i> Organogram</a></li>
+          </ul>
+        </li>
+
+        <!-- Academics Dropdown -->
+        <li class="nav-item">
+          <a href="#courseFinder" class="nav-link">Academics <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#courseFinder" class="dropdown-link acad-filter-link" data-filter="ug"><i class="fa-solid fa-graduation-cap"></i> Undergraduate (B.Tech)</a></li>
+            <li><a href="#courseFinder" class="dropdown-link acad-filter-link" data-filter="pg"><i class="fa-solid fa-user-graduate"></i> Postgraduate (M.Tech, MBA, MCA)</a></li>
+            <li><a href="#courseFinder" class="dropdown-link acad-filter-link" data-filter="phd"><i class="fa-solid fa-atom"></i> Ph.D Doctoral Research</a></li>
+            <li><a href="#courseFinder" class="dropdown-link"><i class="fa-solid fa-scroll"></i> Autonomous KTU Regulations</a></li>
+            <li><a href="#courseFinder" class="dropdown-link"><i class="fa-solid fa-book-open"></i> Syllabi & Curriculum</a></li>
+            <li><a href="#notifications" class="dropdown-link"><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a></li>
+          </ul>
+        </li>
+
+        <!-- Departments Megamenu -->
+        <li class="nav-item">
+          <a href="#departments" class="nav-link">Departments <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="megamenu">
+            <div class="megamenu-grid">
+              <div class="megamenu-col">
+                <h4>Engineering Disciplines</h4>
+                <ul class="megamenu-links">
+                  <li><a href="#cse"><i class="fa-solid fa-laptop-code"></i> Computer Science & Engineering</a></li>
+                  <li><a href="#ece"><i class="fa-solid fa-microchip"></i> Electronics & Communication</a></li>
+                  <li><a href="#eee"><i class="fa-solid fa-bolt"></i> Electrical & Electronics</a></li>
+                  <li><a href="#me"><i class="fa-solid fa-gear"></i> Mechanical Engineering</a></li>
+                  <li><a href="#ce"><i class="fa-solid fa-bridge-water"></i> Civil Engineering</a></li>
+                  <li><a href="#eie"><i class="fa-solid fa-gauge-high"></i> Electronics & Instrumentation</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <h4>Management & Advanced Computing</h4>
+                <ul class="megamenu-links">
+                  <li><a href="#mba-card"><i class="fa-solid fa-chart-pie"></i> Business Administration (MBA - FBS)</a></li>
+                  <li><a href="#mca-card"><i class="fa-solid fa-code"></i> Computer Applications (MCA & iMCA)</a></li>
+                  <li><a href="#courseFinder"><i class="fa-solid fa-atom"></i> Science & Humanities</a></li>
+                  <li><a href="#research"><i class="fa-solid fa-flask-vial"></i> College Research Cell</a></li>
+                  <li><a href="#research-idea"><i class="fa-solid fa-lightbulb"></i> AICTE IDEA Prototyping Lab</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Placements -->
+        <li class="nav-item"><a href="#placements" class="nav-link">Placements</a></li>
+
+        <!-- Research & Innovation -->
+        <li class="nav-item">
+          <a href="#research" class="nav-link res-nav-parent">Research &amp; Labs <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#research-idea" class="dropdown-link res-nav-link" data-research="idea"><i class="fa-solid fa-lightbulb"></i> AICTE IDEA Lab</a></li>
+            <li><a href="#research-cfs" class="dropdown-link res-nav-link" data-research="cfs"><i class="fa-solid fa-server"></i> CFS Supercomputing Center</a></li>
+            <li><a href="#research-robotics" class="dropdown-link res-nav-link" data-research="robotics"><i class="fa-solid fa-robot"></i> Advanced Robotics Lab</a></li>
+            <li><a href="#research-patents" class="dropdown-link res-nav-link" data-research="patents"><i class="fa-solid fa-stamp"></i> Patents &amp; Publications</a></li>
+          </ul>
+        </li>
+
+        <!-- Campus Life -->
+        <li class="nav-item">
+          <a href="#facilities" class="nav-link">Campus Life <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#facilities" class="dropdown-link fac-nav-link" data-facility="library"><i class="fa-solid fa-book"></i> Central Library (100k+ Books)</a></li>
+            <li><a href="#facilities" class="dropdown-link fac-nav-link" data-facility="ccf"><i class="fa-solid fa-desktop"></i> Central Computing Facility (CCF)</a></li>
+            <li><a href="#facilities" class="dropdown-link fac-nav-link" data-facility="hostels"><i class="fa-solid fa-bed"></i> Residential Hostels</a></li>
+            <li><a href="#facilities" class="dropdown-link fac-nav-link" data-facility="sports"><i class="fa-solid fa-volleyball"></i> Sports Arena & Gymnasium</a></li>
+            <li><a href="#facilities" class="dropdown-link fac-nav-link" data-facility="idealab"><i class="fa-solid fa-lightbulb"></i> AICTE IDEA Lab</a></li>
+          </ul>
+        </li>
+
+        <!-- Accreditations & Compliance -->
+        <li class="nav-item">
+          <a href="accreditation.html" class="nav-link">Accreditation <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="accreditation.html" class="dropdown-link"><i class="fa-solid fa-award"></i> NAAC 'A+' Grade (3.45 CGPA)</a></li>
+            <li><a href="accreditation.html" class="dropdown-link"><i class="fa-solid fa-medal"></i> NBA Accredited B.Tech</a></li>
+            <li><a href="accreditation.html" class="dropdown-link"><i class="fa-solid fa-university"></i> UGC Autonomous Status</a></li>
+            <li><a href="accreditation.html" class="dropdown-link"><i class="fa-solid fa-chart-line"></i> Rankings & Recognition</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       5. UPGRADED HERO SECTION (Dynamic, Modern Institutional Showcase)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-glow-orb"></div>
+    <div class="container-wide">
+      <div class="hero-grid">
+        <!-- Hero Text & Value Proposition -->
+        <div class="hero-text-block">
+          <div class="hero-badge-wrap">
+            <span class="hero-pill gold"><i class="fa-solid fa-star"></i> Autonomous Institution</span>
+            <span class="hero-pill"><i class="fa-solid fa-award"></i> NAAC 'A+' Grade Accredited</span>
+            <span class="hero-pill"><i class="fa-solid fa-certificate"></i> NBA Accredited Programs</span>
+          </div>
+
+          <h1 class="hero-title">
+            Empowering Minds,<br>
+            <span>Engineering the Future</span>
+          </h1>
+
+          <p class="hero-lead">
+            Federal Institute of Science And Technology (FISAT) is an autonomous institution established in 2002 by FBOAES. Offering world-class engineering, advanced computing, high-impact research, and industry-leading placements.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-gold" onclick="openBtechQuotaChooser()">
+              <i class="fa-solid fa-graduation-cap"></i> BTech Admission (Govt / Mgmt)
+            </button>
+            <a href="about.html#institution" class="btn btn-secondary">
+              <i class="fa-solid fa-landmark"></i> About FISAT & Vision
+            </a>
+            <a href="#" class="btn btn-ghost" data-open-video>
+              <i class="fa-solid fa-circle-play"></i> Virtual Campus Tour
+            </a>
+          </div>
+
+          <div class="hero-trust-bar">
+            <div class="hero-trust-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Affiliated to KTU</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>AICTE Approved</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>ISO 21001:2018 Certified</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Managed by FBOAES</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Media Showcase Card -->
+        <div class="hero-card-showcase">
+          <div class="hero-main-card">
+            <div class="hero-img-box">
+              <img src="assets/campus-hero.jpeg" alt="FISAT Hormis Nagar Campus" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2026/07/FISAT.jpeg';">
+              <div class="hero-img-overlay">
+                <div class="hero-img-caption">
+                  <h5>Hormis Nagar Campus, Angamaly</h5>
+                  <p><i class="fa-solid fa-location-dot"></i> Eco-friendly 25-Acre Tech Ecosystem in Kochi Suburbs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Interactive Stat Badges -->
+          <div class="floating-badge badge-placement">
+            <div class="floating-badge-icon icon-blue">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="floating-badge-text">
+              <strong>602+ Job Offers</strong>
+              <span>Class of 2026 | Top: ₹17.5 LPA</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-accreditation">
+            <div class="floating-badge-icon icon-gold">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="floating-badge-text">
+              <strong>₹12 Crore+ Scholarships</strong>
+              <span>Merit-cum-Means Financial Aid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. STRUCTURED ADMISSIONS 2026-27 HUB (With BTech Split & Real Links)
+       ========================================================================== -->
+  <section class="admissions-hub-section" id="admissions-hub">
+    <div class="container-wide">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Admissions 2026-27 Portal</span>
+        <h2 class="section-title">Structured Admissions Hub</h2>
+        <p class="section-desc">Select your desired academic pathway below to access the authentic application forms, quota allotments, and official registration systems.</p>
+      </div>
+
+      <div class="admissions-grid">
+        <!-- 1. BTech Admission (Splits into Govt & Mgmt Quotas) -->
+        <div class="admission-card">
+          <div>
+            <div class="admission-badge-top">
+              <span class="adm-cat-pill">Undergraduate (UG)</span>
+              <span class="adm-status-tag">Choose Quota Below</span>
+            </div>
+            <h3 class="adm-title">BTech Admission</h3>
+            <p class="adm-desc">
+              4-Year B.Tech in CSE, ECE, EEE, Mechanical, Civil, and Electronics & Instrumentation. Split into Government Merit and Management/NRI Quotas.
+            </p>
+            <ul class="adm-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Government Quota:</strong> 50% via KEAM CEE Allotment</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Management Quota:</strong> Direct Autonomous Merit & NRI</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Eligibility:</strong> Plus Two (12th) with 45% in PCM</li>
+            </ul>
+          </div>
+          <div class="adm-card-footer">
+            <button class="btn btn-gold btn-sm" onclick="openBtechQuotaChooser()">
+              <i class="fa-solid fa-split"></i> Choose Govt / Mgmt Quota
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. MCA Admission -->
+        <div class="admission-card">
+          <div>
+            <div class="admission-badge-top">
+              <span class="adm-cat-pill">Postgraduate (PG)</span>
+              <span class="adm-status-tag">Official Form Active</span>
+            </div>
+            <h3 class="adm-title">MCA Admission</h3>
+            <p class="adm-desc">
+              2-Year Master of Computer Applications focusing on Full-Stack Systems, Artificial Intelligence, Cloud Architectures, and Cyber Defense.
+            </p>
+            <ul class="adm-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Eligibility:</strong> BCA / B.Sc CS or degree with Maths (50% marks)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Quotas:</strong> LBS Govt Allotment (50%) & Management Merit (50%)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Placements:</strong> 100% placement track record with top IT leaders</li>
+            </ul>
+          </div>
+          <div class="adm-card-footer">
+            <a href="#admissions-hub" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Official MCA Form
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. iMCA Admission (Integrated MCA) -->
+        <div class="admission-card">
+          <div>
+            <div class="admission-badge-top">
+              <span class="adm-cat-pill">5-Year Integrated Degree</span>
+              <span class="adm-status-tag">Direct After 12th</span>
+            </div>
+            <h3 class="adm-title">iMCA Admission</h3>
+            <p class="adm-desc">
+              Integrated Master of Computer Applications directly after Plus Two (Class 12). Saves one academic year and leads directly to a Master's degree.
+            </p>
+            <ul class="adm-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Eligibility:</strong> 10+2 with Maths / Stats / Computer Studies (45%)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Advantage:</strong> Dual-qualification pathway saving 1 year</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Internships:</strong> Live software industry projects from 3rd year</li>
+            </ul>
+          </div>
+          <div class="adm-card-footer">
+            <a href="#admissions-hub" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Official iMCA Form
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. MBA Admission -->
+        <div class="admission-card">
+          <div>
+            <div class="admission-badge-top">
+              <span class="adm-cat-pill">FISAT Business School (FBS)</span>
+              <span class="adm-status-tag">GD/PI Rounds Open</span>
+            </div>
+            <h3 class="adm-title">MBA Admission</h3>
+            <p class="adm-desc">
+              2-Year MBA with dual specializations in Finance, Marketing, HR, Operations, and Business Analytics. Harvard Business Review case study pedagogy.
+            </p>
+            <ul class="adm-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Eligibility:</strong> 50% in any recognized degree + CAT / CMAT / KMAT</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Selection:</strong> Entrance Test (80%) + GD (10%) + Interview (10%)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Corporate Connect:</strong> Federal Bank, EY, KPMG, Berger, TCS</li>
+            </ul>
+          </div>
+          <div class="adm-card-footer">
+            <a href="https://fbs.ac.in/" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open FBS MBA Portal
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Hostel Admission -->
+        <div class="admission-card">
+          <div>
+            <div class="admission-badge-top">
+              <span class="adm-cat-pill">Campus Residence</span>
+              <span class="adm-status-tag">Online Allotment Active</span>
+            </div>
+            <h3 class="adm-title">Hostel Admission</h3>
+            <p class="adm-desc">
+              Safe, peaceful, Wi-Fi-enabled on-campus residential accommodation for men and women with hygienic multi-cuisine dining and 24/7 security.
+            </p>
+            <ul class="adm-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Capacity:</strong> 1,200+ students in separate Men's and Women's halls</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Amenities:</strong> High-speed Wi-Fi, modern gym, recreation & library</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Portal:</strong> Direct online room allotment on campus intranet</li>
+            </ul>
+          </div>
+          <div class="adm-card-footer">
+            <a href="https://intranet.fisat.ac.in/Hostel/" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-bed"></i> Open Official Hostel Portal
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. College Plus Admission -->
+        <div class="admission-card">
+          <div>
+            <div class="admission-badge-top">
+              <span class="adm-cat-pill">Finishing School & Skilling</span>
+              <span class="adm-status-tag">Batch 2026 Open</span>
+            </div>
+            <h3 class="adm-title">College Plus Admission</h3>
+            <p class="adm-desc">
+              Specialized add-on finishing school curriculum running concurrently with regular engineering to grant international certifications and language fluency.
+            </p>
+            <ul class="adm-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Certifications:</strong> AWS Cloud, Cisco CCNA, Red Hat Linux, AI DevOps</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Languages:</strong> Foreign Language training (German & Japanese)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Outcome:</strong> Direct fast-track into premium global recruitment</li>
+            </ul>
+          </div>
+          <div class="adm-card-footer">
+            <a href="#admissions-hub" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open College Plus Form
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. INSTITUTIONAL METRICS (Live Counters)
+       ========================================================================== -->
+  <section class="stats-banner" aria-label="Key Performance Statistics">
+    <div class="container-wide">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-hourglass-start"></i></div>
+          <div class="stat-text">
+            <div class="stat-number" data-counter="23" data-suffix="+">23+</div>
+            <div class="stat-label">Years of Academic Excellence</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="stat-text">
+            <div class="stat-number" data-counter="602" data-suffix="+ Offers">602+</div>
+            <div class="stat-label">Placements in Class of 2026</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="stat-text">
+            <div class="stat-number" data-counter="12" data-prefix="₹" data-suffix=" Cr+">₹12 Cr+</div>
+            <div class="stat-label">Scholarships Awarded by FBOAES</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-text">
+            <div class="stat-number" data-counter="3200" data-suffix="+">3,200+</div>
+            <div class="stat-label">Empowered Students on Campus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. AI COURSE & CAREER NAVIGATOR (Intelligent Program Matcher)
+       ========================================================================== -->
+  <section class="section section-alt" id="courseFinder">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Academic Navigator</span>
+        <h2 class="section-title">Explore Academic Programs Tailored for You</h2>
+        <p class="section-desc">Filter through undergraduate, postgraduate, and doctoral degrees designed in partnership with premier industry leaders.</p>
+      </div>
+
+      <!-- AI Course Finder Filter Box -->
+      <div class="ai-finder-card">
+        <div class="ai-finder-header">
+          <div class="ai-finder-title">
+            <div class="ai-sparkle-icon"><i class="fa-solid fa-sparkles"></i></div>
+            <div>
+              <h3>AI Program Recommender</h3>
+              <p>Select your career focus and level to find the ideal program, intake, and lab facilities.</p>
+            </div>
+          </div>
+          <span class="badge" id="matchingCoursesCount" style="background:#004E95; color:white; padding:6px 14px; border-radius:9999px; font-weight:600; font-size:0.85rem;">
+            6 Programs Matched
+          </span>
+        </div>
+
+        <div class="ai-finder-filters">
+          <div class="filter-row">
+            <span class="filter-label"><i class="fa-solid fa-layer-group"></i> Degree Level:</span>
+            <div class="filter-pills">
+              <button class="filter-pill active" data-filter-level="all">All Degrees</button>
+              <button class="filter-pill" data-filter-level="ug">Undergraduate (B.Tech)</button>
+              <button class="filter-pill" data-filter-level="pg">Postgraduate (M.Tech / MBA / MCA)</button>
+              <button class="filter-pill" data-filter-level="phd">Doctoral (Ph.D)</button>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <span class="filter-label"><i class="fa-solid fa-bolt"></i> Domain Focus:</span>
+            <div class="filter-pills">
+              <button class="filter-pill active" data-filter-domain="all">All Domains</button>
+              <button class="filter-pill" data-filter-domain="ai-software">AI, Data & Software</button>
+              <button class="filter-pill" data-filter-domain="electronics-iot">Electronics, EV & Robotics</button>
+              <button class="filter-pill" data-filter-domain="civil-mech">Structures & Sustainable Tech</button>
+              <button class="filter-pill" data-filter-domain="management">Business & Applications</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filterable Course Cards Grid -->
+      <div class="courses-grid" id="coursesGrid">
+        <!-- CSE -->
+        <div class="course-card" id="cse" data-level="ug" data-domain="ai-software">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">B.Tech</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            </div>
+            <h3 class="course-name">Computer Science and Engineering</h3>
+            <p class="course-description">
+              Cutting-edge curriculum covering Artificial Intelligence, Cloud Systems, Full-Stack Computing, and Cyber Security with CFS Supercomputing access.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 180 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Years</span>
+              <span><i class="fa-solid fa-building-circle-check"></i> Autonomous</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#cse" class="btn btn-secondary btn-sm">Explore CSE</a>
+              <button class="btn btn-primary btn-sm" onclick="openBtechQuotaChooser()">Apply BTech</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ECE -->
+        <div class="course-card" id="ece" data-level="ug" data-domain="electronics-iot">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">B.Tech</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            </div>
+            <h3 class="course-name">Electronics & Communication Engineering</h3>
+            <p class="course-description">
+              Specialized in VLSI Design, Embedded Systems, Signal Processing, and 5G Communications. Backed by industry-grade Cadence design suites.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 120 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Years</span>
+              <span><i class="fa-solid fa-building-circle-check"></i> Autonomous</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#ece" class="btn btn-secondary btn-sm">Explore ECE</a>
+              <button class="btn btn-primary btn-sm" onclick="openBtechQuotaChooser()">Apply BTech</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- EEE -->
+        <div class="course-card" id="eee" data-level="ug" data-domain="electronics-iot">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">B.Tech</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            </div>
+            <h3 class="course-name">Electrical & Electronics Engineering</h3>
+            <p class="course-description">
+              Power Systems, Electric Vehicle (EV) Engineering, Smart Microgrids, Industrial Automation, and Renewable Energy integration.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 60 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Years</span>
+              <span><i class="fa-solid fa-building-circle-check"></i> Autonomous</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#eee" class="btn btn-secondary btn-sm">Explore EEE</a>
+              <button class="btn btn-primary btn-sm" onclick="openBtechQuotaChooser()">Apply BTech</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ME -->
+        <div class="course-card" id="me" data-level="ug" data-domain="civil-mech">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">B.Tech</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            </div>
+            <h3 class="course-name">Mechanical Engineering</h3>
+            <p class="course-description">
+              Digital Prototyping, Thermal Dynamics, Robotics, Mechatronics, and ANSYS FEA simulation labs supported by the AICTE IDEA Lab.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 60 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Years</span>
+              <span><i class="fa-solid fa-building-circle-check"></i> Autonomous</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#me" class="btn btn-secondary btn-sm">Explore ME</a>
+              <button class="btn btn-primary btn-sm" onclick="openBtechQuotaChooser()">Apply BTech</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CE -->
+        <div class="course-card" id="ce" data-level="ug" data-domain="civil-mech">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">B.Tech</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            </div>
+            <h3 class="course-name">Civil Engineering</h3>
+            <p class="course-description">
+              Structural Engineering, Sustainable Green Infrastructure, Smart Cities, Environmental Engineering, and Advanced Geotechnical Analytics.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 60 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Years</span>
+              <span><i class="fa-solid fa-building-circle-check"></i> Autonomous</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#ce" class="btn btn-secondary btn-sm">Explore CE</a>
+              <button class="btn btn-primary btn-sm" onclick="openBtechQuotaChooser()">Apply BTech</button>
+            </div>
+          </div>
+        </div>        <!-- EIE -->
+        <div class="course-card" id="eie" data-level="ug" data-domain="electronics-iot">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">B.Tech</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            </div>
+            <h3 class="course-name">Electronics & Instrumentation Engineering</h3>
+            <p class="course-description">
+              Robotics, Biomedical Systems, Industrial Automation, Smart Sensor Networks, Process Instrumentation, and Virtual LabVIEW platforms.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 30 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Years</span>
+              <span><i class="fa-solid fa-building-circle-check"></i> Autonomous</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#eie" class="btn btn-secondary btn-sm">Explore EIE</a>
+              <button class="btn btn-primary btn-sm" onclick="openBtechQuotaChooser()">Apply BTech</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- MBA -->
+        <div class="course-card" id="mba-card" data-level="pg" data-domain="management">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">MBA (FBS)</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> KTU Autonomous</span>
+            </div>
+            <h3 class="course-name">Master of Business Administration</h3>
+            <p class="course-description">
+              FISAT Business School (FBS). Specializations in Finance, Marketing, HR, Operations, and Business Analytics with corporate live-projects.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 120 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 2 Years</span>
+              <span><i class="fa-solid fa-chart-line"></i> Top Placements</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://fbs.ac.in/" class="btn btn-secondary btn-sm">FBS Website</a>
+              <a href="https://fbs.ac.in/" class="btn btn-primary btn-sm">Apply MBA</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MCA -->
+        <div class="course-card" id="mca-card" data-level="pg" data-domain="ai-software management">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">MCA</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-circle-check"></i> KTU Autonomous</span>
+            </div>
+            <h3 class="course-name">Master of Computer Applications</h3>
+            <p class="course-description">
+              2-Year Advanced Computing Degree in Enterprise Software Engineering, Distributed Systems, Cloud Computing, and AI DevOps.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-users"></i> 120 Intake</span>
+              <span><i class="fa-solid fa-clock"></i> 2 Years</span>
+              <span><i class="fa-solid fa-code"></i> 100% Placed</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#mca-card" class="btn btn-secondary btn-sm">Course Details</a>
+              <a href="#admissions-hub" class="btn btn-primary btn-sm">Apply MCA</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ph.D -->
+        <div class="course-card" data-level="phd" data-domain="ai-software electronics-iot civil-mech">
+          <div>
+            <div class="course-card-top">
+              <span class="course-dept-badge">Doctoral</span>
+              <span class="course-nba-badge"><i class="fa-solid fa-award"></i> KTU Recognized</span>
+            </div>
+            <h3 class="course-name">Ph.D in Engineering & Management</h3>
+            <p class="course-description">
+              Rigorous research guides across CSE, ECE, EEE, ME, CE, and Management with high-performance computing, grants, and patent funding.
+            </p>
+          </div>
+          <div>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-microscope"></i> Research Center</span>
+              <span><i class="fa-solid fa-certificate"></i> AICTE QIP</span>
+              <span><i class="fa-solid fa-scroll"></i> Patents</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="#research" class="btn btn-secondary btn-sm">Research Cell</a>
+              <a href="#admissions-hub" class="btn btn-primary btn-sm">Apply Ph.D</a>
+            </div>
+          </div>
+        </div>
+            </div>
+      <div style="text-align:center; margin-top:36px;">
+        <button class="fac-back-nav-btn" onclick="window.scrollToNav()">
+          <i class="fa-solid fa-arrow-up"></i> Back to Navigation
+        </button>
+      </div>
+    </div>
+  </section>
+
+   & CORPORATE PARTNERS
+       ========================================================================== -->
+  <section class="section section-gradient" id="placements">
+    <div class="container-wide">
+      <div class="placement-banner-card">
+        <div class="placement-banner-grid">
+          <div>
+            <span class="section-tag" style="background:rgba(255,255,255,0.15); color:white;">
+              <i class="fa-solid fa-briefcase"></i> Career Advancement Cell
+            </span>
+            <h2 style="font-size:2.3rem; font-weight:800; margin-bottom:14px; color:white;">
+              Unmatched Placement Records for Class of 2026
+            </h2>
+            <p style="color:rgba(255,255,255,0.85); font-size:1.06rem; line-height:1.65;">
+              FISAT consistently ranks among the top destination campuses in South India for Tier-1 technology companies and global banking corporations. Over 602 offers secured with premier recruiters.
+            </p>
+
+            <div class="placement-stats-row">
+              <div class="placement-stat-box">
+                <strong>602+</strong>
+                <span>Total Job Offers</span>
+              </div>
+              <div class="placement-stat-box">
+                <strong>₹17.5 LPA</strong>
+                <span>Highest Package</span>
+              </div>
+              <div class="placement-stat-box">
+                <strong>₹5.2 LPA</strong>
+                <span>Average Package</span>
+              </div>
+              <div class="placement-stat-box">
+                <strong>80+</strong>
+                <span>Hiring Companies</span>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <a href="#placements" class="btn btn-gold">
+                <i class="fa-solid fa-file-arrow-down"></i> Official Placement Report
+              </a>
+              <a href="mailto:placement@fisat.ac.in" class="btn btn-ghost">
+                <i class="fa-solid fa-envelope"></i> Contact Placement Officer
+              </a>
+            </div>
+          </div>
+
+          <div style="border-radius:18px; overflow:hidden; box-shadow:0 18px 36px rgba(0,0,0,0.35);">
+            <img src="assets/golden-standard.png" alt="FISAT Placement Golden Standard" style="width:100%; object-fit:cover;" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2026/07/Golden-Standard.png';">
+          </div>
+        </div>
+
+        <!-- Recruiters Marquee with Official Logos -->
+        <div class="recruiters-marquee-wrap">
+          <div class="recruiters-track">
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#005696"/><path d="M5 8h14v2h-6v8h-2v-8H5V8z" fill="#fff"/></svg><span>Tata Consultancy Services (TCS)</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#1C5EBE"/><path d="M12 6a6 6 0 0 0-4.24 10.24l1.42-1.42A4 4 0 1 1 16 12h2a6 6 0 0 0-6-6z" fill="#fff"/></svg><span>Cognizant</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#007CC3"/><circle cx="12" cy="8" r="1.8" fill="#fff"/><rect x="10.5" y="11" width="3" height="7" rx="0.5" fill="#fff"/></svg><span>Infosys</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#004E95"/><path d="M12 5l6 3v5c0 3.5-2.5 6-6 7-3.5-1-6-3.5-6-7V8l6-3z" fill="#F59E0B"/><path d="M10 10h4v2h-4v3h-1.5V9h5v1.5H10V10z" fill="#004E95"/></svg><span>Federal Bank</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#232F3E"/><path d="M6 15c3.5 2 8.5 2 12 0" stroke="#FF9900" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M16 14.5l2.2.8-.8-2.2" fill="#FF9900"/><text x="12" y="12" font-size="7" font-weight="900" fill="#fff" text-anchor="middle" font-family="sans-serif">aws</text></svg><span>Amazon AWS</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#000"/><circle cx="8" cy="12" r="2.5" fill="#FF6B00"/><circle cx="14" cy="9" r="2.2" fill="#00A3E0"/><circle cx="16" cy="15" r="2.2" fill="#78BE20"/></svg><span>UST Global</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#fff" stroke="#CBD5E1"/><circle cx="12" cy="7" r="1.8" fill="#E60000"/><circle cx="16" cy="9" r="1.8" fill="#F39200"/><circle cx="17" cy="13" r="1.8" fill="#77B800"/><circle cx="15" cy="17" r="1.8" fill="#009EE0"/><circle cx="10" cy="17" r="1.8" fill="#5C2D91"/><circle cx="7" cy="14" r="1.8" fill="#004E95"/><circle cx="8" cy="9" r="1.8" fill="#E6007E"/></svg><span>Wipro</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#054ADA"/><text x="12" y="15" font-size="9" font-weight="900" fill="#fff" text-anchor="middle" font-family="monospace" letter-spacing="1">IBM</text></svg><span>IBM India</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#EA1B23"/><circle cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="2"/><rect x="8" y="10" width="8" height="4" fill="#fff"/></svg><span>Bosch Global</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#CC0000"/><path d="M16 9.5a5 5 0 1 0 0 5h2a7 7 0 1 1 0-5z" fill="#fff"/></svg><span>Cadence Design</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#A100FF"/><path d="M9 7l5 5-5 5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Accenture</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#0072CE"/><text x="12" y="15" font-size="8" font-weight="900" fill="#fff" text-anchor="middle" font-family="sans-serif">HCL</text></svg><span>HCL Technologies</span></div>
+            <!-- Duplicated for continuous slide -->
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#005696"/><path d="M5 8h14v2h-6v8h-2v-8H5V8z" fill="#fff"/></svg><span>Tata Consultancy Services (TCS)</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#1C5EBE"/><path d="M12 6a6 6 0 0 0-4.24 10.24l1.42-1.42A4 4 0 1 1 16 12h2a6 6 0 0 0-6-6z" fill="#fff"/></svg><span>Cognizant</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#007CC3"/><circle cx="12" cy="8" r="1.8" fill="#fff"/><rect x="10.5" y="11" width="3" height="7" rx="0.5" fill="#fff"/></svg><span>Infosys</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#004E95"/><path d="M12 5l6 3v5c0 3.5-2.5 6-6 7-3.5-1-6-3.5-6-7V8l6-3z" fill="#F59E0B"/><path d="M10 10h4v2h-4v3h-1.5V9h5v1.5H10V10z" fill="#004E95"/></svg><span>Federal Bank</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#232F3E"/><path d="M6 15c3.5 2 8.5 2 12 0" stroke="#FF9900" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M16 14.5l2.2.8-.8-2.2" fill="#FF9900"/><text x="12" y="12" font-size="7" font-weight="900" fill="#fff" text-anchor="middle" font-family="sans-serif">aws</text></svg><span>Amazon AWS</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#000"/><circle cx="8" cy="12" r="2.5" fill="#FF6B00"/><circle cx="14" cy="9" r="2.2" fill="#00A3E0"/><circle cx="16" cy="15" r="2.2" fill="#78BE20"/></svg><span>UST Global</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#fff" stroke="#CBD5E1"/><circle cx="12" cy="7" r="1.8" fill="#E60000"/><circle cx="16" cy="9" r="1.8" fill="#F39200"/><circle cx="17" cy="13" r="1.8" fill="#77B800"/><circle cx="15" cy="17" r="1.8" fill="#009EE0"/><circle cx="10" cy="17" r="1.8" fill="#5C2D91"/><circle cx="7" cy="14" r="1.8" fill="#004E95"/><circle cx="8" cy="9" r="1.8" fill="#E6007E"/></svg><span>Wipro</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#054ADA"/><text x="12" y="15" font-size="9" font-weight="900" fill="#fff" text-anchor="middle" font-family="monospace" letter-spacing="1">IBM</text></svg><span>IBM India</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#EA1B23"/><circle cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="2"/><rect x="8" y="10" width="8" height="4" fill="#fff"/></svg><span>Bosch Global</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#CC0000"/><path d="M16 9.5a5 5 0 1 0 0 5h2a7 7 0 1 1 0-5z" fill="#fff"/></svg><span>Cadence Design</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#A100FF"/><path d="M9 7l5 5-5 5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Accenture</span></div>
+            <div class="recruiter-pill"><svg class="company-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#0072CE"/><text x="12" y="15" font-size="8" font-weight="900" fill="#fff" text-anchor="middle" font-family="sans-serif">HCL</text></svg><span>HCL Technologies</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. RESEARCH & INNOVATION POWERHOUSES (IDEA Lab, CFS, Robotics, Patents)
+       ========================================================================== -->
+  <section class="section section-alt" id="research">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-microchip"></i> Center of Excellence</span>
+        <h2 class="section-title">World-Class Research & Prototyping Labs</h2>
+        <p class="section-desc">At FISAT, students move from theoretical textbooks to physical innovation through sponsored labs and supercomputing facilities.</p>
+      </div>
+
+      <div class="research-grid">
+        <!-- AICTE IDEA Lab -->
+        <div class="research-card" id="research-idea">
+          <div class="research-img-wrap">
+            <img src="assets/idea-lab.jpg" alt="AICTE IDEA Lab FISAT" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2026/03/IDEA-LAB-BANNER-scaled.jpg';">
+          </div>
+          <div class="research-body">
+            <h4>AICTE IDEA Lab</h4>
+            <p>One of Kerala's premier IDEA Labs equipped with industrial 3D printers, CNC laser machines, PCB prototyping, and IoT testing stations for student hardware inventions.</p>
+            <a href="https://fisat.ac.in/" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-right"></i> Explore Lab Specs</a>
+          </div>
+        </div>
+
+        <!-- CFS Supercomputer -->
+        <div class="research-card" id="research-cfs">
+          <div class="research-img-wrap">
+            <img src="assets/cfs-banner.jpg" alt="CFS Supercomputing Center" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2025/06/CFS-FISAT-BANNER-scaled.jpg';">
+          </div>
+          <div class="research-body">
+            <h4>Center for High-Performance Computing (CFS)</h4>
+            <p>High-Performance Supercomputing cluster powering real-time Deep Learning, Computer Vision, Bioinformatics simulations, and autonomous drone systems.</p>
+            <a href="https://fisat.ac.in/" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-right"></i> Supercomputing Specs</a>
+          </div>
+        </div>
+
+        <!-- Robotics & Fab Lab -->
+        <div class="research-card" id="research-robotics">
+          <div class="research-img-wrap">
+            <img src="assets/sports.jpg" alt="Robotics & Innovation Arena" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2022/06/sports-scaled.jpg';">
+          </div>
+          <div class="research-body">
+            <h4>FabLab & Robotics Innovation Arena</h4>
+            <p>Affiliated with MIT's Center for Bits and Atoms (CBA), empowering student teams to build award-winning autonomous robots like "DAWN" and EV prototypes.</p>
+            <a href="#research-robotics" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-right"></i> Inventions & Patents</a>
+          </div>
+        </div>
+
+        <!-- Patents & Research Publications -->
+        <div class="research-card" id="research-patents">
+          <div class="research-img-wrap">
+            <img src="assets/cfs-banner.jpg" alt="Patents & Publications FISAT" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2025/06/CFS-FISAT-BANNER-scaled.jpg';">
+          </div>
+          <div class="research-body">
+            <h4>Patents &amp; Research Publications</h4>
+            <p>Active research ecosystem with 30+ funded patents, high-impact IEEE &amp; Scopus publications, AICTE grant sanctions, and faculty doctoral mentorship.</p>
+            <a href="#research" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-right"></i> Research Cell Portal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Nav button for Research -->
+      <div style="text-align:center; margin-top:32px;">
+        <button class="fac-back-nav-btn" id="resBackNavBtn" onclick="window.scrollToNav()">
+          <i class="fa-solid fa-arrow-up"></i> Back to Navigation
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. CAMPUS PULSE: NEWS, EVENTS & CAMPUS GAZETTE (Filtered Tabs)
+       ========================================================================== -->
+  <section class="section" id="notifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-bell"></i> Notifications</span>
+        <h2 class="section-title">Notifications & Updates</h2>
+        <p class="section-desc">All official notifications, academic updates, events, and institutional announcements in one place.</p>
+      </div>
+
+      <div class="pulse-tabs">
+        <button class="pulse-tab-btn active" data-news-tab="all"><i class="fa-solid fa-layer-group"></i> All Updates</button>
+        <button class="pulse-tab-btn" data-news-tab="news"><i class="fa-solid fa-bullhorn"></i> News</button>
+        <button class="pulse-tab-btn" data-news-tab="event"><i class="fa-solid fa-calendar-check"></i> Events & Workshops</button>
+        <button class="pulse-tab-btn" data-news-tab="gazette"><i class="fa-solid fa-award"></i> Campus Gazette</button>
+      </div>
+
+      <div class="news-grid">
+        <!-- Item 1 -->
+        <div class="news-card" data-category="news">
+          <div>
+            <span class="news-date-badge"><i class="fa-solid fa-calendar"></i> September 29, 2026</span>
+            <h3 class="news-title">Session on France Connect: Pathways to Higher Education & Scholarships</h3>
+            <p class="news-snippet">Department of Electrical and Electronics Engineering organized an exclusive session on French European master's and doctoral research opportunities.</p>
+          </div>
+          <a href="#notifications" class="news-link">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="news-card" data-category="event">
+          <div>
+            <span class="news-date-badge"><i class="fa-solid fa-calendar"></i> September 28, 2026</span>
+            <h3 class="news-title">From Design to Simulation: Five-Day Workshop on ANSYS FEA</h3>
+            <p class="news-snippet">Mechanical Engineering Department's intensive finite element analysis workshop for emerging automotive and aerospace prototyping engineers.</p>
+          </div>
+          <a href="#notifications" class="news-link">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="news-card" data-category="event">
+          <div>
+            <span class="news-date-badge"><i class="fa-solid fa-calendar"></i> November 18, 2026</span>
+            <h3 class="news-title">Call for Papers: 4th International Conference on Sustainable Materials (i-SMaRT 2026)</h3>
+            <p class="news-snippet">Accepting research manuscripts indexed in Scopus and Springer on renewable energy, smart materials, and eco-friendly manufacturing.</p>
+          </div>
+          <a href="#notifications" class="news-link">Submit Paper <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="news-card" data-category="gazette">
+          <div>
+            <span class="news-date-badge"><i class="fa-solid fa-calendar"></i> July 25, 2026</span>
+            <h3 class="news-title">Hall of Fame: Congratulations to Thara Varghese for National Research Honor</h3>
+            <p class="news-snippet">FISAT student researcher recognized nationally for pioneering green energy storage patents and publication in IEEE Transactions.</p>
+          </div>
+          <a href="#notifications" class="news-link">View Gazette <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="news-card" data-category="news">
+          <div>
+            <span class="news-date-badge"><i class="fa-solid fa-calendar"></i> September 23, 2026</span>
+            <h3 class="news-title">Introductory Masterclass on LinkedIn & Corporate Branding by ISTE FISAT</h3>
+            <p class="news-snippet">Hands-on student training session on digital personal branding, resume curation, and networking with global recruiters.</p>
+          </div>
+          <a href="#notifications" class="news-link">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="news-card" data-category="gazette">
+          <div>
+            <span class="news-date-badge"><i class="fa-solid fa-calendar"></i> July 20, 2026</span>
+            <h3 class="news-title">AICTE IDEA Lab Patent Published: Agrobot Agricultural Automation</h3>
+            <p class="news-snippet">Interdisciplinary team of CSE and ME students successfully files national patent for smart autonomous crop monitoring rover "DAWN".</p>
+          </div>
+          <a href="#notifications" class="news-link">View Patent <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+          <div style="text-align:center; margin-top:36px;">
+        <button class="fac-back-nav-btn" onclick="window.scrollToNav()">
+          <i class="fa-solid fa-arrow-up"></i> Back to Navigation
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. CAMPUS LIFE & WORLD-CLASS FACILITIES SHOWCASE
+       ========================================================================== -->
+  <section class="section section-alt" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-landmark"></i> Hormis Nagar Campus</span>
+        <h2 class="section-title">Life Beyond the Classrooms</h2>
+        <p class="section-desc">Experience an enriching 25-acre tech-campus equipped with world-class residential, academic, research, and athletic ecosystems.</p>
+      </div>
+
+      <!-- Quick Category Filter Pills -->
+      <div class="fac-tab-row" id="facFilterRow">
+        <button class="fac-tab-btn active" data-fac-filter="all"><i class="fa-solid fa-layer-group"></i> All Facilities</button>
+        <button class="fac-tab-btn" data-fac-filter="library"><i class="fa-solid fa-book"></i> Central Library</button>
+        <button class="fac-tab-btn" data-fac-filter="ccf"><i class="fa-solid fa-desktop"></i> CCF Supercomputing</button>
+        <button class="fac-tab-btn" data-fac-filter="sports"><i class="fa-solid fa-volleyball"></i> Sports Arena</button>
+        <button class="fac-tab-btn" data-fac-filter="hostels"><i class="fa-solid fa-bed"></i> Residential Hostels</button>
+        <button class="fac-tab-btn" data-fac-filter="idealab"><i class="fa-solid fa-lightbulb"></i> AICTE IDEA Lab</button>
+      </div>
+
+      <!-- Multi-Facility Grid: All Pictures Aligned Beautifully -->
+      <div class="facilities-grid" id="facilitiesGrid">
+        
+        <!-- 1. Central Library -->
+        <div class="facility-card" id="fac-library" data-fac-type="library">
+          <div class="facility-img-box">
+            <img src="assets/library.jpg" alt="FISAT Central Library" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2022/07/library-scaled.jpg';">
+            <span class="facility-badge-top"><i class="fa-solid fa-book-open"></i> 1,00,000+ Books &amp; IEEE</span>
+          </div>
+          <div class="facility-body">
+            <h3 class="facility-title">Central Library</h3>
+            <p class="facility-desc">
+              Spans three automated floors housing 1,00,000+ volumes, international journals, digital OPAC catalogues, IEEE Xplore, and dedicated silent study pods.
+            </p>
+            <ul class="facility-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 1,00,000+ Books &amp; National/International Journals</li>
+              <li><i class="fa-solid fa-circle-check"></i> IEEE Xplore Digital Access &amp; NPTEL SWAYAM Pods</li>
+              <li><i class="fa-solid fa-circle-check"></i> Discussion Rooms &amp; Fully Automated OPAC System</li>
+            </ul>
+            <div class="facility-footer">
+              <span style="font-size:0.85rem; color:#64748B; font-weight:600;"><i class="fa-solid fa-clock"></i> Open 8:00 AM – 8:00 PM</span>
+              <a href="about.html#institution" class="btn btn-secondary btn-sm">Library Specs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Central Computing Facility (CCF) -->
+        <div class="facility-card" id="fac-ccf" data-fac-type="ccf">
+          <div class="facility-img-box">
+            <img src="assets/cfs-banner.jpg" alt="CFS Supercomputing Center" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2025/06/CFS-FISAT-BANNER-scaled.jpg';">
+            <span class="facility-badge-top"><i class="fa-solid fa-server"></i> CFS Supercomputer</span>
+          </div>
+          <div class="facility-body">
+            <h3 class="facility-title">Central Computing Facility (CCF)</h3>
+            <p class="facility-desc">
+              High-Performance Supercomputing cluster powering cutting-edge AI/ML deep learning, bioinformatics, computational fluid simulations, and cloud systems.
+            </p>
+            <ul class="facility-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Gigabit Fiber Backbone Network across Campus</li>
+              <li><i class="fa-solid fa-circle-check"></i> High-End GPU Server Clusters for Deep Learning</li>
+              <li><i class="fa-solid fa-circle-check"></i> Licensed CAD/CAE, MATLAB, ANSYS &amp; SolidWorks</li>
+            </ul>
+            <div class="facility-footer">
+              <span style="font-size:0.85rem; color:#64748B; font-weight:600;"><i class="fa-solid fa-shield-halved"></i> 24x7 Research Access</span>
+              <a href="#research" class="btn btn-secondary btn-sm">Explore CCF</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Indoor Sports Arena & Gymnasium -->
+        <div class="facility-card" id="fac-sports" data-fac-type="sports">
+          <div class="facility-img-box">
+            <img src="assets/sports.jpg" alt="FISAT Indoor Sports Arena" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2022/06/sports-scaled.jpg';">
+            <span class="facility-badge-top"><i class="fa-solid fa-volleyball"></i> Olympic-Standard Arena</span>
+          </div>
+          <div class="facility-body">
+            <h3 class="facility-title">Indoor Sports Arena &amp; Gym</h3>
+            <p class="facility-desc">
+              World-class indoor sporting arena featuring synthetic badminton courts, basketball courts, table tennis, athletic tracks, and fully equipped fitness gym.
+            </p>
+            <ul class="facility-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 6 Synthetic Badminton Courts &amp; Basketball Arena</li>
+              <li><i class="fa-solid fa-circle-check"></i> Modern Multi-Gym with Cardio &amp; Strength Equipment</li>
+              <li><i class="fa-solid fa-circle-check"></i> State &amp; University Championship Tournament Venue</li>
+            </ul>
+            <div class="facility-footer">
+              <span style="font-size:0.85rem; color:#64748B; font-weight:600;"><i class="fa-solid fa-trophy"></i> KTU Sports Champions</span>
+              <a href="#notifications" class="btn btn-secondary btn-sm">Sports Events</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Residential Hostels -->
+        <div class="facility-card" id="fac-hostels" data-fac-type="hostels">
+          <div class="facility-img-box">
+            <img src="assets/campus-hero.jpeg" alt="FISAT Residential Hostels" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2026/07/FISAT.jpeg';">
+            <span class="facility-badge-top"><i class="fa-solid fa-bed"></i> 1,250+ Residential Beds</span>
+          </div>
+          <div class="facility-body">
+            <h3 class="facility-title">Residential Campus Hostels</h3>
+            <p class="facility-desc">
+              Safe, peaceful on-campus residential accommodation for men and women across Sanjo, Hormis, St. Mary's, and Mother Teresa halls with nutritious dining.
+            </p>
+            <ul class="facility-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 650 Beds (Men) + 600 Beds (Women)</li>
+              <li><i class="fa-solid fa-circle-check"></i> High-Speed Wi-Fi &amp; Dedicated Reading Rooms</li>
+              <li><i class="fa-solid fa-circle-check"></i> 24/7 Security, CCTV &amp; Resident Warden Care</li>
+            </ul>
+            <div class="facility-footer">
+              <span style="font-size:0.85rem; color:#10B981; font-weight:700;"><i class="fa-solid fa-circle-check"></i> Rooms Allotted</span>
+              <a href="hostel.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-bed"></i> Hostel Form &amp; Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. AICTE IDEA Lab -->
+        <div class="facility-card" id="fac-idealab" data-fac-type="idealab">
+          <div class="facility-img-box">
+            <img src="assets/idea-lab.jpg" alt="AICTE IDEA Lab FISAT" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/uploads/2026/03/IDEA-LAB-BANNER-scaled.jpg';">
+            <span class="facility-badge-top"><i class="fa-solid fa-lightbulb"></i> AICTE IDEA Maker Space</span>
+          </div>
+          <div class="facility-body">
+            <h3 class="facility-title">AICTE IDEA Lab &amp; Maker Space</h3>
+            <p class="facility-desc">
+              ₹1.1 Crore government-funded hardware prototyping lab equipped with industrial 3D printers, laser cutters, CNC milling, and IoT testing stations.
+            </p>
+            <ul class="facility-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Rapid 3D Printing &amp; Laser Cutting Prototyping</li>
+              <li><i class="fa-solid fa-circle-check"></i> Embedded Robotics, Drone &amp; IoT Test Benches</li>
+              <li><i class="fa-solid fa-circle-check"></i> Startup Mentoring &amp; Student Patent Incubator</li>
+            </ul>
+            <div class="facility-footer">
+              <span style="font-size:0.85rem; color:#64748B; font-weight:600;"><i class="fa-solid fa-microchip"></i> Hardware Hub</span>
+              <a href="#research-idea" class="btn btn-secondary btn-sm">IDEA Lab Specs</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Back to Nav button -->
+      <div style="text-align:center; margin-top:38px;">
+        <button class="fac-back-nav-btn" id="facBackNavBtn" onclick="window.scrollToNav()">
+          <i class="fa-solid fa-arrow-up"></i> Back to Navigation
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. INSTITUTIONAL FOOTER (Authentic, Compliant & Accessible)
+       ========================================================================== -->
+    <!-- Bottom Back to Navigation Bar -->
+  <div style="background:#003669; padding:22px; text-align:center; border-top:1px solid rgba(255,255,255,0.15);">
+    <button onclick="window.scrollToNav()" class="fac-back-nav-btn" style="background:#fff; color:#004E95; border:none; padding:12px 36px; font-weight:700; border-radius:50px; cursor:pointer; font-size:0.95rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+      <i class="fa-solid fa-arrow-up"></i> Back to Navigation
+    </button>
+  </div>
+
+  <footer class="footer-main" id="contact">
+    <div class="container-wide">
+      <div class="footer-grid">
+        <!-- Column 1: Institutional Identity -->
+        <div class="footer-col">
+          <img src="assets/logo_main.png" alt="FISAT Emblem" class="footer-brand-logo" onerror="this.onerror=null; this.src='https://fisat.ac.in/wp-content/themes/fisat2022/assets/logo_main.png';">
+          <p class="footer-text">
+            <strong>Federal Institute of Science And Technology (Autonomous)</strong><br>
+            Approved by AICTE, New Delhi & Affiliated to APJ Abdul Kalam Technological University (KTU), Thiruvananthapuram.<br>
+            Accredited by NAAC with <strong>'A+' Grade</strong>. NBA Accredited B.Tech Programs.<br>
+            Established and managed by <strong>Federal Bank Officers' Association Educational Society (FBOAES)</strong>.
+          </p>
+          <div style="display:flex; gap:10px; margin-top:14px;">
+            <a href="https://www.facebook.com/fisatofficial/" style="color:white; font-size:1.1rem; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fisat_official/" style="color:white; font-size:1.1rem; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/school/fisat/" style="color:white; font-size:1.1rem; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/channel/UC4Z_bL6eGqCq1pZ0l7b4o7Q" style="color:white; font-size:1.1rem; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Structured Admissions Links -->
+        <div class="footer-col">
+          <h5>Admissions 2026-27</h5>
+          <ul class="footer-links">
+            <li><a href="javascript:openBtechQuotaChooser()"><i class="fa-solid fa-angle-right"></i> BTech - Government & Management Quotas</a></li>
+            <li><a href="#admissions-hub"><i class="fa-solid fa-angle-right"></i> MCA Admission (Official Form)</a></li>
+            <li><a href="#admissions-hub"><i class="fa-solid fa-angle-right"></i> iMCA Admission (5-Year Integrated)</a></li>
+            <li><a href="https://fbs.ac.in/"><i class="fa-solid fa-angle-right"></i> MBA Admission (FBS Portal)</a></li>
+            <li><a href="https://intranet.fisat.ac.in/Hostel/"><i class="fa-solid fa-angle-right"></i> Hostel Room Allotment Portal</a></li>
+            <li><a href="#admissions-hub"><i class="fa-solid fa-angle-right"></i> College Plus Finishing School</a></li>
+            <li><a href="https://intranet.fisat.ac.in/"><i class="fa-solid fa-angle-right"></i> Student Portal Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: About & Statutory Links -->
+        <div class="footer-col">
+          <h5>About & Governance</h5>
+          <ul class="footer-links">
+            <li><a href="about.html#institution"><i class="fa-solid fa-angle-right"></i> The Institution</a></li>
+            <li><a href="about.html#vision"><i class="fa-solid fa-angle-right"></i> Vision and Mission</a></li>
+            <li><a href="about.html#values"><i class="fa-solid fa-angle-right"></i> Core Values (INSPIRE)</a></li>
+            <li><a href="about.html#fboaes"><i class="fa-solid fa-angle-right"></i> FBOAES Sponsoring Society</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Anti-Ragging Cell & Helpline</a></li>
+            <li><a href="https://fisat.ac.in/iqac"><i class="fa-solid fa-angle-right"></i> Internal Quality Assurance (IQAC)</a></li>
+            <li><a href="https://fisat.ac.in/nirf/"><i class="fa-solid fa-angle-right"></i> NIRF & ARIIA Rankings</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Location -->
+        <div class="footer-col">
+          <h5>Campus Address</h5>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Federal Institute of Science And Technology (FISAT) &reg;<br>
+              Hormis Nagar, Mookkannoor P O, Angamaly, Ernakulam District, Kerala, India - Pin: 683 577</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>General Desk: 0484 - 2725272, 2725273<br>Admissions Hotline: +91 94477 25272</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email: <a href="mailto:mail@fisat.ac.in" style="color:white; text-decoration:underline;">mail@fisat.ac.in</a><br>Admissions: <a href="mailto:admissions@fisat.ac.in" style="color:white; text-decoration:underline;">admissions@fisat.ac.in</a></span>
+            </li>
+            <li>
+              <i class="fa-solid fa-plane-departure"></i>
+              <span>12 km from Cochin International Airport (COK)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Federal Institute of Science And Technology (FISAT). All Rights Reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html#institution">About FISAT</a>
+          <span>&bull;</span>
+          <a href="about.html#vision">Vision & Mission</a>
+          <span>&bull;</span>
+          <a href="#admissions-hub">Admissions</a>
+          <span>&bull;</span>
+          <a href="https://fisat.ac.in/mandatory-disclosure/">Mandatory Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       14. BTECH QUOTA CHOOSER MODAL (Government Quota vs Management Quota)
+       ========================================================================== -->
+  <div class="search-palette-backdrop" id="btechQuotaModal">
+    <div class="search-palette-modal" style="width:720px; max-width:94%;">
+      <div style="background:linear-gradient(135deg, #004E95 0%, #002244 100%); color:white; padding:22px 28px; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <span style="background:#F59E0B; color:#0F172A; font-size:0.72rem; font-weight:800; padding:3px 9px; border-radius:4px; text-transform:uppercase;">Undergraduate B.Tech</span>
+          <h3 style="font-size:1.45rem; font-weight:800; margin-top:4px;">BTech Admission 2026-27</h3>
+          <p style="font-size:0.86rem; opacity:0.85; margin-top:2px;">Choose whether you are applying through Government Quota (KEAM) or Management Quota:</p>
+        </div>
+        <button onclick="document.getElementById('btechQuotaModal').classList.remove('active')" style="color:white; font-size:1.4rem; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="quota-split-modal-body">
+        <!-- Option 1: Government Quota -->
+        <div class="quota-choice-card">
+          <div>
+            <h4 class="quota-choice-title"><i class="fa-solid fa-landmark"></i> Government Quota</h4>
+            <p class="quota-choice-desc">Allotment conducted through the Commissioner for Entrance Examinations (CEE), Kerala (KEAM 2026).</p>
+            <ul class="quota-features">
+              <li><i class="fa-solid fa-circle-check"></i> 50% of Total Seats in All Branches</li>
+              <li><i class="fa-solid fa-circle-check"></i> Regulated Govt Tuition Fees</li>
+              <li><i class="fa-solid fa-circle-check"></i> Centralized Online Allotment</li>
+            </ul>
+          </div>
+          <div>
+            <a href="admissions-btech-govt.html" class="btn btn-secondary btn-sm" style="width:100%; margin-bottom:8px;">
+              <i class="fa-solid fa-calendar-days"></i> Counselling Schedule
+            </a>
+            <a href="https://fisat.ac.in/wp-content/uploads/2024/08/List-of-Documents-to-be-submitted-for-Government-Quota-admission.pdf" class="btn btn-primary btn-sm" style="width:100%;">
+              <i class="fa-solid fa-file-pdf"></i> Required Documents (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 2: Management Quota -->
+        <div class="quota-choice-card management">
+          <div>
+            <h4 class="quota-choice-title"><i class="fa-solid fa-file-signature"></i> Management Quota</h4>
+            <p class="quota-choice-desc">Direct Merit & NRI Quota applications on the official FISAT Autonomous admission registration portal.</p>
+            <ul class="quota-features">
+              <li><i class="fa-solid fa-circle-check"></i> 35% Management + 15% NRI Quota</li>
+              <li><i class="fa-solid fa-circle-check"></i> Merit Scholarships up to 100% Fee Waiver</li>
+              <li><i class="fa-solid fa-circle-check"></i> Online Application & Fee Payment</li>
+            </ul>
+          </div>
+          <div>
+            <a href="https://btech-admission.fisat.ac.in/admission/" class="btn btn-gold btn-sm" style="width:100%; margin-bottom:8px;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Application Form
+            </a>
+            <a href="https://btech-adm-profile.fisat.ac.in/" class="btn btn-secondary btn-sm" style="width:100%;">
+              <i class="fa-solid fa-credit-card"></i> Student Fee & Profile Portal
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       15. FISAT SMART AI CAMPUS ASSISTANT ("FisatGPT")
+       ========================================================================== -->
+  <div class="ai-chat-launcher">
+    <button class="ai-launcher-btn" id="aiLauncherBtn" aria-label="Open FISAT AI Campus Assistant">
+      <i class="fa-solid fa-robot"></i>
+      <span class="ai-launcher-ping"></span>
+    </button>
+  </div>
+
+  <!-- AI Chat Window -->
+  <aside class="ai-modal-box" id="aiModalBox" aria-label="FISAT AI Assistant Window">
+    <div class="ai-modal-header">
+      <div class="ai-header-info">
+        <div class="ai-avatar"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="ai-title-wrap">
+          <h4>FisatGPT Campus AI</h4>
+          <div class="ai-status-indicator">
+            <span class="ai-status-dot"></span>
+            <span>Online &bull; 2026-27 Knowledge Active</span>
+          </div>
+        </div>
+      </div>
+      <button class="ai-close-btn" id="aiCloseBtn" aria-label="Close Assistant">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="ai-chat-body" id="aiChatBody">
+      <div class="ai-msg bot">
+        <div class="ai-msg-bubble">
+          👋 Hello! I am the <strong>FISAT Smart AI Campus Assistant</strong>.<br>
+          How can I help you today? You can select an admission category below or ask any question:
+          <div class="ai-quick-prompts">
+            <button class="ai-prompt-chip" data-query="BTech Government Quota counselling schedule">🏛️ Govt Quota BTech</button>
+            <button class="ai-prompt-chip" data-query="BTech Management Quota application portal">🎓 Mgmt Quota BTech</button>
+            <button class="ai-prompt-chip" data-query="What is the Vision and Mission of FISAT?">📜 Vision & Mission</button>
+            <button class="ai-prompt-chip" data-query="MCA and iMCA integrated admission details">💻 MCA & iMCA</button>
+            <button class="ai-prompt-chip" data-query="MBA Admission selection at FISAT Business School">📊 MBA Admission</button>
+            <button class="ai-prompt-chip" data-query="Hostel admission and living facilities">🏠 Hostel Admission</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-chat-footer">
+      <form class="ai-input-form" id="aiChatForm">
+        <input type="text" class="ai-input-field" id="aiInputField" placeholder="Ask about BTech, MCA, MBA, Hostels, Cutoffs..." autocomplete="off">
+        <button type="submit" class="ai-send-btn" aria-label="Send message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       16. COMMAND SEARCH PALETTE (Ctrl + K Spotlight Search)
+       ========================================================================== -->
+  <div class="search-palette-backdrop" id="searchPaletteBackdrop">
+    <div class="search-palette-modal">
+      <div class="search-input-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="paletteSearchInput" placeholder="Quick jump to BTech, MCA, MBA, hostel, syllabus, ERP... (Esc to close)">
+      </div>
+      <ul class="search-results-list" id="paletteResultsList">
+        <!-- Filled by JS -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       17. CAMPUS TOUR VIDEO MODAL
+       ========================================================================== -->
+  <div class="search-palette-backdrop" id="videoModal" style="padding-top:60px;">
+    <div class="search-palette-modal" style="width:820px; max-width:92%; background:#000; border:none; position:relative;">
+      <button id="videoModalClose" style="position:absolute; top:12px; right:16px; color:white; font-size:1.5rem; z-index:100; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+        <iframe id="tourVideoIframe" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="js/app.js"></script>
+  <script>
+    function openBtechQuotaChooser() {
+      const modal = document.getElementById('btechQuotaModal');
+      if (modal) modal.classList.add('active');
+    }
+  </script>
+  <script>
+    // Dismiss Welcome Splash Screen after 2.4 seconds
+    (function() {
+      function dismissSplash() {
+        var splash = document.getElementById('welcomeSplashScreen');
+        if (splash && !splash.classList.contains('fade-out')) {
+          splash.classList.add('fade-out');
+          setTimeout(function() {
+            if (splash.parentNode) splash.parentNode.removeChild(splash);
+          }, 800);
+        }
+      }
+      // Trigger after 2.4s
+      setTimeout(dismissSplash, 2400);
+      window.addEventListener('load', function() {
+        setTimeout(dismissSplash, 2400);
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
